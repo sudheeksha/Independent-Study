@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class FraudulentActivityNotifications {
     private static final int MAX_EXPENDITURE = 200;
 
-    private static int getMedian(int[] countSort, int d)
+    private static double getMedian(int[] countSort, int d)
     {
         int cursor = 0;
         int left = -1;
         int right = -1;
-        int median = 0;
+        double median = 0;
 
         for (int e = 0; e <= MAX_EXPENDITURE; e++) {
             cursor += countSort[e];
@@ -26,7 +26,7 @@ public class FraudulentActivityNotifications {
 
                 if (cursor > d / 2 && left != -1) {
                     right = e;
-                    median = (int) ((left + right) / 2.0);
+                    median = ((left + right) / 2.0);
                     break;
                 }
 
@@ -51,7 +51,7 @@ public class FraudulentActivityNotifications {
         for (int i = d; i < n; i++) {
             int currentAmount = arr[i];
 
-            int median = getMedian(countSort, d);
+            double median = getMedian(countSort, d);
 
             if (currentAmount >= 2 * median) {
                 notifications++;
