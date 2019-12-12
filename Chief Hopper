@@ -14,9 +14,7 @@ def chiefHopper(arr):
         p *= 2
 
     attempt = int(ceil(s))
-
-    # floating points are super tricky.
-    # so sometimes the answer can be of by 1
+    
     # arr = [2] * 100 + [100]
     start = attempt
     for i in arr:
