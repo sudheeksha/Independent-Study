@@ -36,10 +36,6 @@ while t:
 		for j in range(n-2,-1,-1):
 			down[j][i] = min(arr[j][i], arr[j][i]+ down[j+1][i])
 
-	# print up
-	# print down
-	# print left
-	# print right
 	final = []
 	for i in range(n):
 		temp = []
