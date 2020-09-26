@@ -43,3 +43,25 @@ An easy approach to this problem is to implement insertion sort and count the nu
 - First, the array to be sorted is passed. The array is divided into two halves by the merge sort function, and two new merge sort functions are called. This recursively divides the array into individual elements.
 - During the merge sort process, each time if a value of the 2nd array is larger than the 1st array, the number of shifts it would have to make to its valid position is added to the counter.
 - Once the sorting process ends, the count of shifts is returned. Recursively, all the shift counts are added.
+
+## Jogging Cats
+### Problem Statement
+It's almost summertime, so Big Cat and Little Cat are getting in shape. They decide the core of their fitness plan is to start jogging every day.
+Their city consists of N intersections connected by M bidirectional roads. The cats decide that their jogging route should be cyclic (i.e., starting and ending at the same intersection) and consist of 4 different roads.
+The cats also love exploring new places, so each day they want to choose a new route to jog on that is not equal to any of their previous routes. Two routes are considered to be equal if their sets of component roads are equal.
+Given a map of the city, can you help our heroic cats determine the maximum number of days they can go jogging so that every route traveled is different?
+### Implementation
+• The N nodes are split into two kinds of nodes – big nodes and small nodes 2
+• To split the nodes, T = N3. If a node is bigger than T, then it is a big node. Otherwise, it is a small node.
+• All the cycles can be now found using the following steps -
+o For a cycle with four small nodes, using brute force, we find one node and then
+two other neighbors and the fourth node that is adjacent to the neighbors.
+o For a cycle with three nodes, using brute force, we find one node and then two
+other neighbors and the fourth node that is adjacent to the neighbors; also, the
+fourth node is a big node.
+o For a cycle with two nodes that are not connected by an edge, using brute force,
+find a small node, and two big nodes. The big nodes found should be such that it forms a three-length path with a small node, and the small node is in between the two big nodes.
+o For a cycle with two nodes and a connected edge, we brute force and find two big nodes. We have to make sure that this forms a cycle.
+o For a cycle with one node, brute force a small node and two big neighbors, and the fourth node should be such that it creates unordered end points.
+o For a cycle with 0 nodes, brute force is used to find three big nodes that are connected.
+### Time Complexity – The total time complexity is 0 56. ,78.
