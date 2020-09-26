@@ -54,15 +54,15 @@ Given a map of the city, can you help our heroic cats determine the maximum numb
 - The N nodes are split into two kinds of nodes – big nodes and small nodes 2
 - To split the nodes, T = N3. If a node is bigger than T, then it is a big node. Otherwise, it is a small node.
 - All the cycles can be now found using the following steps -
--- For a cycle with four small nodes, using brute force, we find one node and then
+  - For a cycle with four small nodes, using brute force, we find one node and then
 two other neighbors and the fourth node that is adjacent to the neighbors.
--- For a cycle with three nodes, using brute force, we find one node and then two
+  - For a cycle with three nodes, using brute force, we find one node and then two
 other neighbors and the fourth node that is adjacent to the neighbors; also, the
 fourth node is a big node.
--- For a cycle with two nodes that are not connected by an edge, using brute force,
+  - For a cycle with two nodes that are not connected by an edge, using brute force,
 find a small node, and two big nodes. The big nodes found should be such that it forms a three-length path with a small node, and the small node is in between the two big nodes.
--- For a cycle with two nodes and a connected edge, we brute force and find two big nodes. We have to make sure that this forms a cycle.
--- For a cycle with one node, brute force a small node and two big neighbors, and the fourth node should be such that it creates unordered end points.
--- For a cycle with 0 nodes, brute force is used to find three big nodes that are connected.
+  - For a cycle with two nodes and a connected edge, we brute force and find two big nodes. We have to make sure that this forms a cycle.
+  - For a cycle with one node, brute force a small node and two big neighbors, and the fourth node should be such that it creates unordered end points.
+  - For a cycle with 0 nodes, brute force is used to find three big nodes that are connected.
 ### Time Complexity 
 The total time complexity is O(M.N^{2/3})
