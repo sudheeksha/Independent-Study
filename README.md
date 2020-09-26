@@ -20,10 +20,14 @@ Index | Suffix
 4 | ANA
 5 | NA
 6 | A
+
 After sorting the suffixes, we get – 6A
+Index | Suffix
+----- | ------
 4 | ANA
 2 | ANANA
 1 | BANANA 
 5 | NA
 3 | NANA
+
 Once we sort the suffixes, we get the prefix string of each string and generate all possible substrings. For example, NANA will make [N, NA, NAN, NANA]. Notice that all the substrings are produced in the correct lexicographical order that needs to be concatenated. By going through the sorted suffixes array and generating all the substring for each suffix, we get all substrings in the order required for concatenation. We skip any duplicates. For example, A and ANA have one character as a common prefix, so the first character in ANA is omitted. Once we have all the substrings, we concatenate them and print out the kth value.
