@@ -12,6 +12,8 @@ For example, given the string s= abcd, its distinct substrings are [a, ab, abc, 
 ### Implementation
 The solution to this problem requires using a suffix array and the longest common prefixes. After finding distinct substrings, sorting strings using the merge sort can have the worst time complexity of O(N$ logN). To improve this, suffix arrays can be used. Suffix strings are part of a string and can be sorted using indexes. 
 Let us take an example: BANANA
+Index | Suffix
+----- | ------
 1 | BANANA
 2 | ANANA
 3 | NANA
